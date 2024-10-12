@@ -1,3 +1,12 @@
+:root {
+    --crust-color: #FB8B23;
+    --base-color: #FBBF58;
+    --cheese-color: #f7d012;
+    --pepperoni-color: #D63E12;
+    --basil-color: #52AA24;
+    --slice-color: #797575;
+}
+
 html {
     width: 500px;
     height: 500px;
@@ -12,75 +21,45 @@ body {
 }
 
 #pizza {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    border: 1px solid black;
+    width: 500px;
+    height: 500px;
+}
+
+#slices {
+    width: 500px;
+    height: 500px;
 }
 
 .slice {
-    width: 0px;
-    height: 0px;
-    box-sizing: border-box;
-    border-top: 200px solid transparent;
-    border-right: 82.85px solid transparent;
-    border-bottom: 200px solid maroon;
-    border-left: 82.85px solid transparent;
-    border-radius: 10%;
+    width: 200px;
+    height: 200px;
+    border-left: 15px solid var(--crust-color);
+    border-top: 15px solid var(--crust-color);
+    border-radius: 100% 0 0 0;
+    background-color: var(--base-color);
+    position: absolute;
 }
 
 .slice.one {
-    position: absolute;
-    top: calc(50% - 200px);
-    left: calc(50% - 82.85px);
-    transform: rotateZ(90deg);
+    transform: rotate(45deg);
+    top: 100px;
+    left: 250px;
 }
 
 .slice.two {
-    position: absolute;
-    top: calc(50% - 200px);
-    left: calc(50% - 82.85px);
-    transform: rotateZ(135deg);
+    transform: rotate(135deg);
+    left: 400px;
+    top: 250px;
 }
 
 .slice.three {
-    position: absolute;
-    top: calc(50% - 200px);
-    right: calc(50% - 82.85px);
-    transform: rotateZ(180deg);
+    transform: rotate(225deg);
+    top: 400px;
+    left: 250px;
 }
 
 .slice.four {
-    position: absolute;
-    top: calc(50% - 200px);
-    right: calc(50% - 82.85px);
-    transform: rotateZ(225deg);
-}
-
-.slice.five {
-    position: absolute;
-    top: calc(50% - 200px);
-    right: calc(50% - 82.85px);
-    transform: rotateZ(270deg);
-}
-
-.slice.six {
-    position: absolute;
-    bottom: calc(50% - 200px);
-    right: calc(50% - 82.85px);
-    transform: rotateZ(315deg);
-}
-
-.slice.seven {
-    position: absolute;
-    bottom: calc(50% - 200px);
-    right: calc(50% - 82.85px);
-    transform: rotateZ(360deg);
-}
-
-.slice.eight {
-    position: absolute;
-    bottom: calc(50% - 200px);
-    left: calc(50% - 82.85px);
-    transform: rotateZ(45deg);
+    transform: rotate(315deg);
+    left: 100px;
+    top: 250px;
 }
